@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Wishes</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #ffcccb;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .birthday-card {
+      background-color: #f8d7da;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      width: 90%;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .birthday-image-container {
+      position: relative;
+      width: 100%;
+      height: 400px; /* Adjust the height as needed */
+      overflow: hidden;
+      border-bottom: 3px solid #d9534f;
+    }
+
+    .birthday-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Resize the image to fit its actual size */
+      width: 400px;
+      height: 561px;
+    }
+
+    .birthday-content {
+      padding: 20px;
+      text-align: center;
+      /* Make the birthday content container more wider */
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #d9534f;
+      font-size: 2.5em;
+    }
+
+    p {
+      color: #495057;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="birthday-card">
+          <div class="birthday-image-container">
+            <img class="birthday-image" src="lamiya.jpg" alt="Birthday Image">
+          </div>
+          <div class="birthday-content">
+            <h2>🎉 Happy Birthday! 🎂</h2>
+            <p>Wishing you a day filled with excitement, laughter, and all your favorite things!</p>
+            <p>May this year be full of amazing adventures, new friendships, and endless joy!</p>
+            <p>Enjoy your special day to the fullest! 🥳</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
