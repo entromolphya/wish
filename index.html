@@ -10,26 +10,32 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background-color: #ffcccb;
+            background: linear-gradient(135deg, #ffcccb, #ffc0cb);
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: 'Arial', sans-serif;
         }
 
         .birthday-card {
-            background-color: #f8d7da;
+            background-color: #fff;
             border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            width: 80%; /* Adjust the width as needed */
+            width: 90%;
+            max-width: 500px;
+            max-height: 95vh; /* Ensures it fits within the screen */
+            border: 2px solid #d9534f;
+            display: flex;
+            flex-direction: column;
         }
 
         .birthday-image-container {
             position: relative;
             width: 100%;
-            max-height: 66.67vh; /* 2:3 aspect ratio (2 / 3 * 100) */
+            flex-grow: 1; /* Ensures it scales dynamically */
             overflow: hidden;
             border-bottom: 3px solid #d9534f;
         }
@@ -41,23 +47,51 @@
         }
 
         .birthday-content {
-            padding: 20px; /* Reduced padding for smaller screens */
+            padding: 20px;
             text-align: center;
+            background: #f8d7da;
+            flex-shrink: 0; /* Prevents shrinking of the content */
         }
 
         h2 {
             color: #d9534f;
-            font-size: 1.8em; /* Adjust font size for smaller screens */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
 
         p {
             color: #495057;
-            font-size: 1em; /* Adjust font size for smaller screens */
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .btn {
+            margin-top: 15px;
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c9302c;
         }
 
         @media (max-width: 576px) {
             .birthday-card {
-                width: 90%; /* Adjust the width for smaller screens */
+                width: 95%;
+                max-height: 90vh; /* Further reduced height for smaller screens */
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -66,18 +100,17 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="birthday-card">
-                    <div class="birthday-image-container">
-                        <img class="birthday-image" src="emon.jpg" alt="Birthday Image">
-                    </div>
-                    <div class="birthday-content">
-                        <h2>🎉 Happy Birthday! 🎂</h2>
-                        <p>Wishing you a day filled with excitement, laughter, and all your favorite things!</p>
-                        <p>May this year be full of amazing adventures, new friendships, and endless joy!</p>
-                        <p>Enjoy your special day to the fullest! 🥳</p>
-                    </div>
+        <div class="row justify-content-center">
+            <div class="birthday-card">
+                <div class="birthday-image-container">
+                    <img class="birthday-image" src="emon.jpg" alt="Birthday Image">
+                </div>
+                <div class="birthday-content">
+                    <h2>🎉 Happy Birthday! 🎂</h2>
+                    <p>Wishing you a day filled with excitement, laughter, and all your favorite things!</p>
+                    <p>May this year be full of amazing adventures, new friendships, and endless joy!</p>
+                    <p>Enjoy your special day to the fullest! 🥳</p>
+                    <button class="btn">Celebrate Now!</button>
                 </div>
             </div>
         </div>
